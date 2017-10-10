@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>Eventos </title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet"/>
+  <script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+    <ul class="navbar-nav">
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="tutorial.html">Tutorial</a></li>
+    </ul>
+  </nav>
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="tutorial.html">Tutorial</a>
+  </div>
+  
+<div  id="main" class="mainDiv" align="right">
+	<form id="eventosForm">
+		<h1 id="fireHeading" align="center">Eventos</h1>
+		<h2 align="left">Tipo de evento:<input type="text"  id="tipoevento"><br></h2>
+		<h2 align="left">Titulo:<input type="text"  id="titulo"><br></h2>
+		<h2 align="left">Publico Alvo:<input type="text"  id="publicalvo"></h2>
+		<h2 align="left">data:<input type="text"  id="data"><br></h2>
+		<h2 align="left">hora:<input type="text"  id="hora"><br></h2>
+		<h2 align="left">Unidade Responsável:<input type="text"  id="unidaderesp"><br></h2>
+		<h2 align="left">Promovido:<input type="text"  id="promovido"><br></h2>
+		<h2 align="left">telefone:<input type="text"  id="telefone"><br></h2>
+		<h2 align="left">Email:<input type="text"  id="email"><br></h2>
+		<h2 align="left">Local:<br></h2>
+		<h2 align="left">Pais:<input type="text"  id="pais"></h2>
+		<h2 align="left">Estado:<input type="text"  id="estado"></h2>
+		<h2 align="left">municipio:<input type="text"  id="municipio"></h2>
+		<h2 align="left">Resumo:</h2><br><textarea id="resumo" placeholder="resumo..."></textarea>
+		<button type="submit">Submit</button>		
+	</form>	
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script src="eventos.js"> </script>
+ <script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+  </script>
+ </body>
+</html>
